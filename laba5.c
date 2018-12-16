@@ -46,7 +46,7 @@ int main(void)
             printf("Can\'t receive message from queue\n");
             exit(-1);
         }
-        printf("Pr.2: message type = 1, text = %s\n", mybuf.mtext);
+        printf("Pot: message type = 1, text = %s\n", mybuf.mtext);
         mybuf.mtype = 2;
         for(int j=0; j < strlen(mybuf.mtext); j++) {
             if (isdigit(mybuf.mtext[j]))
@@ -125,7 +125,7 @@ int main(void)
             msgctl(msqid, IPC_RMID, (struct msqid_ds *) NULL);
             exit(0);
         }
-        printf("Pr.1: message type = %ld, text = %s\n", mybuf.mtype, mybuf.mtext);
+        printf("Rod: message type = %ld, text = %s\n", mybuf.mtype, mybuf.mtext);
     }
 
         exit(0);
