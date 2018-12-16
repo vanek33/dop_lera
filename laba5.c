@@ -60,7 +60,7 @@ int main(void)
 
         /* Если принятое сообщение имеет содержание end, прекращаем работу. В противном случае печатаем текст принятого сообщения. */
 
-        if (strncmp(mybuf.mtext, "END", MAX_MESSAGE_LEN) == 0) {
+        if (strncmp(mybuf.mtext, "end", MAX_MESSAGE_LEN) == 0) {
 
             mybuf.mtype = 2; // присваеваем сообщению i-ый тип
             strcpy(mybuf.mtext, "end");
