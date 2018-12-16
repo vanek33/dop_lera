@@ -57,8 +57,10 @@ int main()
         /* Начало обработки и запись в очередь */
         mybuf.mtype = 2;
         for(int j=0; j < strlen(mybuf.mtext); j++) {
-            if (isdigit(mybuf.mtext[j]))
-                mybuf.mtext[j]= 'X';
+            if (line[j] == 57)
+			    line[j] = 48;
+			else if (isdigit(line[j])){
+			    line[j]= line[j] + 1;
         }
 
         if (msgsnd(msqid, (struct msgbuf *) &mybuf, len, 0) < 0) {
