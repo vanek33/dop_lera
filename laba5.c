@@ -59,7 +59,7 @@ int main(void)
         }
 
         /* Если принятое сообщение имеет содержание end, прекращаем работу. В противном случае печатаем текст принятого сообщения. */
-
+        printf("Pr.2: message type = 1, text = %s\n", mybuf.mtext);
         if (strncmp(mybuf.mtext, "end", MAX_MESSAGE_LEN) == 0) {
 
             mybuf.mtype = 2; // присваеваем сообщению i-ый тип
@@ -74,7 +74,7 @@ int main(void)
             }
             exit(0);
         }
-            printf("message type = 1, text = %s\n", mybuf.mtext);
+            
     }
         
 
@@ -125,7 +125,7 @@ int main(void)
             msgctl(msqid, IPC_RMID, (struct msqid_ds *) NULL);
             exit(0);
         }
-        printf("message type = %ld, text = %s\n", mybuf.mtype, mybuf.mtext);
+        printf("Pr.1: message type = %ld, text = %s\n", mybuf.mtype, mybuf.mtext);
     }
 
         exit(0);
