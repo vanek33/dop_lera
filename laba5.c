@@ -46,6 +46,7 @@ int main(void)
             printf("Can\'t receive message from queue\n");
             exit(-1);
         }
+        printf("Pr.2: message type = 1, text = %s\n", mybuf.mtext);
         mybuf.mtype = 2;
         for(int j=0; j < strlen(mybuf.mtext); j++) {
             if (isdigit(mybuf.mtext[j]))
@@ -59,7 +60,6 @@ int main(void)
         }
 
         /* Если принятое сообщение имеет содержание end, прекращаем работу. В противном случае печатаем текст принятого сообщения. */
-        printf("Pr.2: message type = 1, text = %s\n", mybuf.mtext);
         if (strncmp(mybuf.mtext, "end", MAX_MESSAGE_LEN) == 0) {
 
             mybuf.mtype = 2; // присваеваем сообщению i-ый тип
