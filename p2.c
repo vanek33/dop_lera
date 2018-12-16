@@ -87,7 +87,7 @@ int main()
             exit(0);
         }
 
-        printf("message type = %ld, text = %s\n", mybuf.mtype, mybuf.mtext);
+        printf("message type = 1, text = %s\n", mybuf.mtext);
     }
 
     return 0; /* Исключительно для отсутствия warning'ов при компиляции. */
