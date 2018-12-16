@@ -74,7 +74,6 @@ int main(void)
             }
             exit(0);
         }
-        printf("message type = %ld, text = %s\n", mybuf.mtype, mybuf.mtext);
     }
         
 
